@@ -6,6 +6,7 @@ Test secrets.py
 '''
 
 import pytest
+import squareconnect
 from pysquare.secrets import get_secrets
 
 
@@ -26,3 +27,10 @@ class Test_Get_Secrets_Method(object):
 		'''
 		secret_error = get_secrets('MY_NAME')
 		assert secret_error == 'JSON name/value pair not found. Please check json file and set the MY_NAME name/value pair'
+
+class Test_Square_Connect_API_connection(object):
+	'''
+	Test get_secret method connects to square api.
+	'''
+	sq_connect = squareconnect.configuration.access_token = get_secrets('ACCESS_TOKEN')
+	
