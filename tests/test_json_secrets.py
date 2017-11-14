@@ -17,8 +17,8 @@ class Test_Get_Secrets_Method(object):
 		'''
 		Test get_secret method returns setting variables from JSON file.
 		'''
-		secret_auth = get_secrets('ACCESS_TOKEN')
-		assert secret_auth == get_secrets('ACCESS_TOKEN')
+		secret_auth = get_secrets('TEST_ID')
+		assert secret_auth == "Test"
 
 	def test_get_secrets_value_pair_error(self):
 		'''

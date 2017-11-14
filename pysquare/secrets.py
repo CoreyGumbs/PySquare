@@ -7,6 +7,7 @@ Protects all API keys and allows them to be called when needed, where needed.
 
 import os
 import json
+import squareconnect
 
 #Global Paths
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
